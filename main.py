@@ -3,7 +3,7 @@ import pyttsx3
 import pyaudio
 import pywhatkit
 import datetime
-#import wikipedia
+import wikipedia
 #import pyjokes
 
 listener = sr.Recognizer()
@@ -43,12 +43,12 @@ def run_jeanie():
         time = datetime.datetime.now().strftime('%I:%M %p')
         print(time)
         talk('current time is' + time)
-    """elif 'who is' in command():
+    elif 'who is' in command():
       person = command.replace('who is', '')
       info = wikipedia.summary(person, 2)
       print(info)
       talk(info)
-    elif 'joke' in command():
+    """elif 'joke' in command():
       talk(pyjokes.get_joke())"""
     else:
         talk('i did not understand the command')
